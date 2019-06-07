@@ -6,4 +6,4 @@ before_install:
   - docker build -t douglum/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run douglum/docker-react npm run test -- --coverage
+  - docker run -e CI=true 7967 npm run test -- --watchAll=false
